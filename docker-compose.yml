@@ -2,8 +2,8 @@ version: '3'
 services:
   web:
     build:
-      context: .
-      dockerfile: build/web/Dockerfile
+      context: ./build/web
+      dockerfile: Dockerfile
     stdin_open: true
     tty: true
     volumes:
@@ -24,7 +24,7 @@ services:
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
       - db-data:/var/lib/mysql
-      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./build/db/my.cnf:/etc/mysql/conf.d/my.cnf
 
 volumes:
   db-data:
