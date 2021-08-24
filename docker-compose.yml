@@ -17,8 +17,8 @@ services:
       dockerfile: Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: go_database
-      MYSQL_USER: go_test
+      MYSQL_DATABASE: cline_develop
+      MYSQL_USER: cline
       MYSQL_PASSWORD: password
       TZ: 'Asia/Tokyo'
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
